@@ -2170,7 +2170,7 @@ snaptr('track', 'PAGE_VIEW');
                     Complete our short survey and receive a $1000 Walmart gift card. Join 500,000+ satisfied customers who've already claimed their rewards.
                 </p>
                 <div class="hero-actions">
-                    <a href="https://www.af9m8trk.com/7LF11GDF/T6M12294/?s1=Piash1" class="btn-hero btn-primary" id="mainCTA" target="_blank">
+                    <a href="https://www.af9m8trk.com/7LF11GDF/T6M12294/?s1=Piash1" class="btn-hero btn-primary" id="mainCTA">
                         <span>Start Survey Now</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
@@ -2628,7 +2628,7 @@ snaptr('track', 'PAGE_VIEW');
                     Join thousands of happy customers today. Your $1000 Walmart gift card awaits!
                 </p>
                 <div class="cta-buttons">
-                    <a href="https://www.af9m8trk.com/7LF11GDF/T6M12294/?s1=Piash1" class="btn-hero btn-primary btn-cta" id="finalCTA" target="_blank">
+                    <a href="https://www.af9m8trk.com/7LF11GDF/T6M12294/?s1=Piash1" class="btn-hero btn-primary btn-cta" id="finalCTA">
                         <span>Start Survey Now</span>
                         <i class="fas fa-rocket"></i>
                     </a>
@@ -2887,8 +2887,9 @@ snaptr('track', 'PAGE_VIEW');
             }
         });
         
-        // Button Click Handlers
+        // Button Click Handlers - Fixed to open in current tab only
         document.getElementById('mainCTA').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
             // Add visual feedback
             this.innerHTML = '<span class="spinner"></span> Processing...';
             
@@ -2899,6 +2900,7 @@ snaptr('track', 'PAGE_VIEW');
         });
         
         document.getElementById('finalCTA').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default link behavior
             // Add visual feedback
             this.innerHTML = '<span class="spinner"></span> Processing...';
             
